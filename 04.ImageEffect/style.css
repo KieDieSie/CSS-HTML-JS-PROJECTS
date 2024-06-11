@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #555;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #222;
+
+}
+
+.clip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.clip1{
+    background: url(https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 25% 0, 33% 100%, 0 100%);
+}
+
+.clip2{
+    background: url(https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(75% 0, 25% 0, 33% 100%, 66% 100%);
+}
+
+.clip3{
+    background: url(https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(75% 0, 100% 0%, 100% 100%, 66% 100%);
+}
+
+.container:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.container .clip:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
